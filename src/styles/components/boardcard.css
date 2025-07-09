@@ -1,0 +1,48 @@
+.board-card-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  transition: box-shadow 0.2s ease;
+}
+
+.board-card-container:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.board-card-container input[type="text"] {
+  padding: 0.3rem 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.board-card {
+  flex: 1;
+  text-decoration: none;
+  color: #333;
+}
+
+.board-card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.board-card-icons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.board-card-icons svg {
+  cursor: pointer;
+  color: #444;
+  transition: color 0.2s ease;
+}
+
+.board-card-icons svg:hover {
+  color: #000;
+}

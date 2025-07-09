@@ -1,0 +1,9 @@
+.dashboard {
+  width: 100%;
+  max-width: 1024px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+}

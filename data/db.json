@@ -1,0 +1,86 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "Mohamed",
+      "email": "sharfrasaqsan@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "021c",
+      "username": "aqsan",
+      "email": "aqsan@gmail.com",
+      "password": "12345"
+    }
+  ],
+  "boards": [
+    {
+      "id": "2",
+      "date": "Tue Jul 08 2025 13:55:59 GMT+0530 (India Standard Time)",
+      "label": "Home"
+    },
+    {
+      "id": "3",
+      "date": "2024.07.06",
+      "label": "School"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "boardId": 1,
+      "checked": true,
+      "text": "Buid a to-do app"
+    },
+    {
+      "id": "2",
+      "boardId": 1,
+      "checked": false,
+      "text": "Buid a online shopping app"
+    },
+    {
+      "id": "4",
+      "boardId": 2,
+      "checked": true,
+      "text": "Make a table"
+    },
+    {
+      "id": "5",
+      "boardId": 2,
+      "checked": false,
+      "text": "Buy some kitchen essential"
+    },
+    {
+      "id": "6",
+      "boardId": 3,
+      "checked": false,
+      "text": "Read Tamil book"
+    },
+    {
+      "id": "7",
+      "boardId": 3,
+      "checked": false,
+      "text": "Do some maths quizes"
+    },
+    {
+      "id": "8",
+      "boardId": 3,
+      "checked": false,
+      "text": "Do Home work"
+    },
+    {
+      "id": "811",
+      "boardId": 2,
+      "date": "Tue Jul 08 2025 13:56:41 GMT+0530 (India Standard Time)",
+      "checked": false,
+      "text": "Make Breackfast"
+    },
+    {
+      "id": "8111",
+      "boardId": 2,
+      "date": "Tue Jul 08 2025 13:56:53 GMT+0530 (India Standard Time)",
+      "checked": false,
+      "text": "Make lunch"
+    }
+  ]
+}

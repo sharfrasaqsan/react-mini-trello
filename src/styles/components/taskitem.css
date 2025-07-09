@@ -1,0 +1,61 @@
+.task-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.task-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.task-item label {
+  flex: 1;
+  cursor: pointer;
+  user-select: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.task-item label:hover {
+  color: #4f46e5; /* Indigo-600 */
+}
+
+.task-item label.checked {
+  text-decoration: line-through;
+  color: #94a3b8; /* Gray-400 */
+}
+
+.task-item form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.task-item form input[type="text"] {
+  flex: 1;
+  padding: 0.3rem 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #cbd5e1; /* Gray-300 */
+  border-radius: 4px;
+}
+
+.task-item form input[type="text"]:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 3px #a5b4fc;
+}
+
+.task-item svg[role="button"] {
+  cursor: pointer;
+  color: #64748b; /* Gray-500 */
+  transition: color 0.2s;
+}
+
+.task-item svg[role="button"]:hover {
+  color: #4f46e5; /* Indigo-600 */
+}
