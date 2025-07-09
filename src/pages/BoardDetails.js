@@ -11,6 +11,7 @@ const BoardDetails = ({
   setTasks,
   taskSearchResults,
   setTaskSearchResults,
+  isBoardsLoading,
 }) => {
   const [tasksSearch, setTasksSearch] = useState("");
 
@@ -27,10 +28,16 @@ const BoardDetails = ({
     setTaskSearchResults(filteredTasks);
   }, [id, tasks, tasksSearch, setTaskSearchResults]);
 
+  if (isBoardsLoading) {
+    return;
+  }
+
   return (
     <div className="board-details">
-      {!board ? (
+      {isBoardsLoading ? (
         <p style={{ textAlign: "center" }}>Loading board data...</p>
+      ) : !board ? (
+        <p style={{ textAlign: "center" }}>Board data not found!</p>
       ) : (
         <>
           <h2>{board.label} Board</h2>

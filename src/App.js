@@ -29,9 +29,10 @@ function App() {
       try {
         const respones = await apiRequest.get("/boards");
         setBoards(respones.data);
-        setIsBoardsLoading(false);
       } catch (err) {
         alert(err.message);
+      } finally {
+        setIsBoardsLoading(false);
       }
     };
 
@@ -85,19 +86,14 @@ function App() {
             path="/board/:id"
             element={
               isLoggedIn ? (
-                isBoardsLoading ? (
-                  <p style={{ textAlign: "center" }}>Loading board data...</p>
-                ) : (
-                  <BoardDetails
-                    boards={boardSearchResults}
-                    tasks={tasks}
-                    setTasks={setTasks}
-                    taskSearchResults={taskSearchResults}
-                    setTaskSearchResults={setTaskSearchResults}
-                    isBoardsLoading={isBoardsLoading}
-                    setIsBoardsLoading={setIsBoardsLoading}
-                  />
-                )
+                <BoardDetails
+                  boards={boardSearchResults}
+                  tasks={tasks}
+                  setTasks={setTasks}
+                  taskSearchResults={taskSearchResults}
+                  setTaskSearchResults={setTaskSearchResults}
+                  isBoardsLoading={isBoardsLoading}
+                />
               ) : (
                 <Navigate to="/login" replace />
               )
