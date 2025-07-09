@@ -12,17 +12,17 @@ import apiRequest from "./api/apiRequest";
 import Error from "./pages/Error";
 
 function App() {
-  const [boards, setBoards] = useState([]);
-  const [tasks, setTasks] = useState([]);
-  const [users, setUsers] = useState([]);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [userName, setUserName] = useState("");
-  const [boardSearchResults, setBoardSearchResults] = useState([]);
-  const [taskSearchResults, setTaskSearchResults] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [isBoardsLoading, setIsBoardsLoading] = useState(true);
+  const [boards, setBoards] = useState([]); // to get all boards
+  const [tasks, setTasks] = useState([]); // to get all tasks
+  const [users, setUsers] = useState([]); // to get all users
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // to check if user is logged in
+  const [email, setEmail] = useState(""); // user email
+  const [password, setPassword] = useState(""); // user password
+  const [userName, setUserName] = useState(""); // user name
+  const [boardSearchResults, setBoardSearchResults] = useState([]); // to get filtered boards
+  const [taskSearchResults, setTaskSearchResults] = useState([]); // to get filtered tasks
+  const [isLoading, setIsLoading] = useState(true); // to avoid Login fetching issue
+  const [isBoardsLoading, setIsBoardsLoading] = useState(true); // to avoid boards fetching issue
 
   useEffect(() => {
     const fetchBoards = async () => {

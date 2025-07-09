@@ -20,6 +20,7 @@ const Login = ({ email, setEmail, password, setPassword, setIsLoggedIn }) => {
         alert("Invalid email or password");
         return;
       }
+      //save slogging in localStorage
       setIsLoggedIn(true);
       localStorage.setItem("isLoggedIn", "true");
       alert("successfuly Loggedin!");

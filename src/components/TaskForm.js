@@ -11,7 +11,7 @@ const TaskForm = ({ tasks, setTasks, boardId }) => {
 
     const date = Date();
     const addNewTask = {
-      boardId: parseInt(boardId), // ⬅️ convert boardId from string to number
+      boardId,
       date,
       checked: false,
       text: newTask,

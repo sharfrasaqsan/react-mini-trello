@@ -17,11 +17,16 @@ const Register = ({
   const handleRegister = async (e) => {
     e.preventDefault();
     if (!userName || !email || !password) return;
-    if (password.length > 8) {
+    if (password.length < 8) {
       alert("Password must be upto 8 characters.");
+      return;
     }
     try {
-      const newUser = { username: userName, email, password };
+      const newUser = {
+        username: userName,
+        email,
+        password,
+      };
       const response = await apiRequest.post("/users", newUser);
       const addNewUser = [...users, response.data];
       setUsers(addNewUser);
