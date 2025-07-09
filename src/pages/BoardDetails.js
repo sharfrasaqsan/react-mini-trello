@@ -21,7 +21,7 @@ const BoardDetails = ({
   useEffect(() => {
     const filteredTasks = tasks.filter(
       (i) =>
-        i.boardId.toString() === id &&
+        i.boardId.toString() === id && // Filter by board ID for the current board details
         i.text.toLowerCase().includes(tasksSearch.toLowerCase())
     );
 

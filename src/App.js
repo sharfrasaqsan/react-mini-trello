@@ -27,8 +27,9 @@ function App() {
   useEffect(() => {
     const fetchBoards = async () => {
       try {
-        const respones = await apiRequest.get("/boards");
-        setBoards(respones.data);
+        const response = await apiRequest.get("/boards");
+        setBoards(response.data);
+        setBoardSearchResults(response.data); // set fetch boards, because boardSearchResults is depend on board
       } catch (err) {
         alert(err.message);
       } finally {
