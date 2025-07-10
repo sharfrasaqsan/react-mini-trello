@@ -17,7 +17,7 @@ const Login = ({ email, setEmail, password, setPassword, setIsLoggedIn }) => {
       });
 
       // If no user found, response.data will be an empty array
-      if (response.data.length === 0) { 
+      if (response.data.length === 0) {
         alert("Invalid email or password");
         return;
       }
